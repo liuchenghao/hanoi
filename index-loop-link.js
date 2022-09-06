@@ -139,8 +139,8 @@ class LinkedPiller extends LinkedList {
     return new Piller(index, discs);
   }
   move(from, to) {
-    let pillerF = from.data;
-    let pillerT = to.data;
+    let pillerF = from.getData();
+    let pillerT = to.getData();
     return pillerF.moveTo(pillerT);
   }
 }
@@ -148,12 +148,16 @@ function init() {
   let rank = 3;
   let level = 3;
   let link = new LinkedPiller(rank, level);
+  // 0 顺时针循环 1 逆时针循环
+  let isClockWise = level % 2;
+  let next = isClockWise? "getPrev": "getNext";
+  let prev = isClockWise? "getNext": "getPrev";
   let root = link.root;
   let move = link.move;
-  while (root = root.getPrev()) {
-    let from = root.getNext();
+  while (root = root[next]()) {
+    let from = root[prev]();
     let to = root;
-    let buffer = root.getPrev();
+    let buffer = root[next]();
     move(from, to);
     if (!move(from, buffer) && !move(buffer, from)) break;
   }
