@@ -48,7 +48,7 @@ class LinkedList {
         next = node;
       }
     }
-    // 首尾相接构造环状链表
+    // 首尾相接 构造双向循环链表
     next.setNext(root);
     root.setPrev(next);
     return root;

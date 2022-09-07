@@ -11,12 +11,12 @@
 let LinkedPiller = require("./LinkedPiller.js")
 function init() {
   let rank = 3;
-  let level = 3;
+  let level = 4;
   let link = new LinkedPiller(rank, level);
   // 0 顺时针循环 1 逆时针循环
   let isClockWise = level % 2;
-  let next = isClockWise? "getPrev": "getNext";
-  let prev = isClockWise? "getNext": "getPrev";
+  let next = isClockWise ? "getPrev" : "getNext";
+  let prev = isClockWise ? "getNext" : "getPrev";
   let root = link.root;
   let move = link.move;
   while (root = root[next]()) {
