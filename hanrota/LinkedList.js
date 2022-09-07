@@ -20,7 +20,14 @@ class Node {
     this.prev = node;
   }
 }
+/**
+ * 
+ */
 class LinkedList {
+  /**
+   * @param {*} num 初始链表节点数
+   * @param {*} isCreate 是否创建链表
+   */
   constructor(num, isCreate) {
     this.num = num;
     isCreate && (this.root = this.create());
@@ -51,6 +58,11 @@ class LinkedList {
     let node = new Node(data);
     return node;
   }
+  /**
+   * 
+   * @param {*} index 设置节点数据
+   * @returns 
+   */
   getData(index) {
     return index;
   }

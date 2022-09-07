@@ -7,7 +7,11 @@ class LinkedPiller extends LinkedList {
     this.level = level;
     this.root = this.create();
   }
-  // 链表节点內数据
+  /**
+   * 重写LinkedList中getData方法 链表节点內数据
+   * @param {*} index 
+   * @returns 
+   */
   getData(index) {
     let discs = [];
     if (!index) {
