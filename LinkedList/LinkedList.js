@@ -1,28 +1,5 @@
-class Node {
-  constructor(data, next, prev) {
-    this.next = next;
-    this.prev = prev;
-    this.data = data;
-  }
-  getNext() {
-    return this.next;
-  }
-  getPrev() {
-    return this.prev;
-  }
-  getData() {
-    return this.data;
-  }
-  setNext(node) {
-    this.next = node;
-  }
-  setPrev(node) {
-    this.prev = node;
-  }
-}
-/**
- * 
- */
+let Node = require("./Node.js");
+
 class LinkedList {
   /**
    * @param {*} num 初始链表节点数
