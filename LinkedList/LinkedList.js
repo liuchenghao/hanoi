@@ -1,5 +1,4 @@
 let Node = require("./Node.js");
-
 class LinkedList {
   /**
    * @param {*} num 初始链表节点数
@@ -42,6 +41,16 @@ class LinkedList {
    */
   getData(index) {
     return index;
+  }
+  /**
+   * 移除节点
+   * @param {*} node 
+   */
+  remove(node){
+    let prev = node.getPrev();
+    let next = node.getNext();
+    prev.setNext(next);
+    next.setPrev(prev);
   }
 }
 module.exports = LinkedList;
