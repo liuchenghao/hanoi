@@ -1,6 +1,6 @@
 let Disc = require("./Disc.js");
 let Piller = require("./Piller.js");
-let LinkedList = require("../LinkedList/LinkedList.js");
+let LinkedList = require("../linkedList/LinkedList.js");
 class LinkedPiller extends LinkedList {
   constructor(num, level) {
     super(num);
