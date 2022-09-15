@@ -4,5 +4,8 @@ class LinkedJosephus extends LinkedList {
     super(num);
     this.root = this.create();
   }
+  getData(index) {
+    return index + 1;
+  }
 }
 module.exports = LinkedJosephus;
