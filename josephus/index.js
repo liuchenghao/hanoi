@@ -2,15 +2,15 @@
 
 let LinkedJosephus = require("./LinkedJosephus.js")
 function init() {
-  let m = 5;
-  let n = 3;
+  let n = 5;
+  let m = 3;
   let count = 1;
-  let link = new LinkedJosephus(m);
+  let link = new LinkedJosephus(n);
   let root = link.root;
   let next = "getNext";
   let remove = link.remove;
   while (root != root[next]()) {
-    if (count % n) {
+    if (count % m) {
     } else {
       // let temp = root[next]();
       console.info("remove->", count, root.getData())
